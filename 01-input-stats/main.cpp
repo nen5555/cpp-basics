@@ -36,7 +36,7 @@ int main(){
     std::cout << "min = " << min << '\n';  
     std::cout << "count = " << count <<"\n";
     
-    std::cout << std::fixed << std::setprecision(2) << avg << '\n';  
+    std::cout <<"avg = "<< std::fixed << std::setprecision(2) << avg << '\n';  
 
 
 }

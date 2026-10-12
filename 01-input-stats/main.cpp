@@ -1,17 +1,20 @@
 #include<iostream>
 #include<algorithm>
 #include<iomanip>
+#include<limits>
 
 int main(){
     int x;
-    int sum=0;
-    int max=0;
-    int min=0;
-    int count = 1;
+    long long  sum=0;
+    int max   = std::numeric_limits<int>::lowest();
+    int min   = std::numeric_limits<int>::max();
+   
+    int count = 0;
+
+    
     
     
     while(std::cin >> x && x!=0 ){
-
         sum += x;
         count +=1;
         max = std::max(max,x);
@@ -20,11 +23,20 @@ int main(){
     }
 
     double avg  = static_cast<double>(sum)/count;
+    if(!count){
+        max=0;
+        min=0;
+        avg=0;
+    }
+
+    
+    
     std::cout << "sum = " << sum << '\n';   
     std::cout << "max = " << max << '\n';   
     std::cout << "min = " << min << '\n';  
+    std::cout << "count = " << count <<"\n";
     
-    std::cout << std::fixed << std::setprecision(2) << avg << '\n';  // 3.14
+    std::cout << std::fixed << std::setprecision(2) << avg << '\n';  
 
 
 }

@@ -127,7 +127,7 @@ bool median(std::vector<int> v,double& result){
         if(v.size()%2==1){
             result = v[v.size()/2];
         }else{
-            result= (v[v.size()/2]+v[v.size()/2-1])/2;
+            result= static_cast<double> (v[v.size()/2]+v[v.size()/2-1])/2;
         };
 
     }

@@ -106,9 +106,9 @@ void swapByValue(int a,int b){
     swap =a;
     a=b;
     b=swap;
-};//swap为中间数字 先将a的数字赋值给swap,然后将b的数值赋值给a,最后将swap存储的数字赋值给b。但是主函数传送到函数内的只是副本
-// 函数里面的a,b交换了 是副本交换
-//只在函数内 所以函数外数字没交换
+};//int a,int b只是值传递 相当于传了一个副本 修改副本 不会改变原来的值 int &a,int&b 引用传递 可以理解为指向同一块区域的别名 修改内存区的值 达到改变数值
+//int *a int *b 直接传 a,b的地址 *a来指向a区域，然后表达式中 *a直接修改区域的数字
+//注意 值传递和引用传递 都为 函数（a,b）指针传递 函数（&a，&b）
 
 void swapByRef(int &a,int& b){
   int temp=0;

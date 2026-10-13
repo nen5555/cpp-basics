@@ -50,22 +50,30 @@ int main(){
     std::cout <<"交换后c的数值为" << c << std::endl;
     std::cout <<"交换后d的数值为" << d << std::endl;
 
-    int arr[5] = {3,9,1,7,4};
+    //int arr[5] = {3,9,1,7,4};
+    int arr1[5] = {13,9,1,7,4};
+    //int arr2[5] = {3,9,1,7,14};
+    
+
     int* max=nullptr;
-    max = findMax(arr,5);
+    if(findMax(arr1,5) == nullptr){
+        std::cout << " arr is empty" <<std::endl;
+    }
+
+    max = findMax(arr1,5);
 
     std::cout <<"max的数值为" << *max << std::endl;
 
     *max= 0;
-    for(int x:arr){
+    for(int x:arr1){
         std::cout << x <<" ";
     }
     std::cout <<std::endl;
 
-    int * nupt = nullptr;
-    int nuptnum = *nupt;
+    // int * nupt = nullptr;
+    // int nuptnum = *nupt;
 
-     std::cout <<"manuptx的数值为" << nuptnum << std::endl;
+    //  std::cout <<"manuptx的数值为" << nuptnum << std::endl;
 
 
 

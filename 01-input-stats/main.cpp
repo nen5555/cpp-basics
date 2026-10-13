@@ -21,14 +21,14 @@ int main(){
         min = std::min(min,x);
     }
 
-    double avg  = static_cast<double>(sum)/count;
+    double avg =0.0 ;
     if(!count){
         max=0;
         min=0;
         avg=0;
     }
 
-    
+    avg = static_cast<double>(sum)/count;
     
     std::cout << "sum = " << sum << '\n';   
     std::cout << "max = " << max << '\n';   

@@ -106,7 +106,8 @@ void swapByValue(int a,int b){
     swap =a;
     a=b;
     b=swap;
-};//swap为中间数字 先将a的数字赋值给swap,然后将b的数值赋值给a,最后将swap存储的数字赋值给b。但是由于没有返回 函数里面的a,b交换了 作用域
+};//swap为中间数字 先将a的数字赋值给swap,然后将b的数值赋值给a,最后将swap存储的数字赋值给b。但是主函数传送到函数内的只是副本
+// 函数里面的a,b交换了 是副本交换
 //只在函数内 所以函数外数字没交换
 
 void swapByRef(int &a,int& b){

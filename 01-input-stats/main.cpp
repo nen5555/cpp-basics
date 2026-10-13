@@ -19,7 +19,6 @@ int main(){
         count +=1;
         max = std::max(max,x);
         min = std::min(min,x);
-
     }
 
     double avg  = static_cast<double>(sum)/count;

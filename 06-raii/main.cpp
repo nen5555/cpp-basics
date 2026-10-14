@@ -40,6 +40,27 @@ class IntBuffer{
     //IntBuffer& operator=(const IntBuffer&) = delete;  // 禁止拷贝赋值
 };
 
+bool IntBuffer::set(int index,int value){
+    if(index <static_cast<int>(data_.size())|| index >=0)
+    {
+        return false;
+    }
+    else {
+        data_[index]=value;
+    }
+    return true;
+}
+
+bool IntBuffer::get(int index,int& value) const{
+    if(index <static_cast<int>(data_.size()|| index >=0))
+    {
+        return false;
+    }
+    else {
+        value =data_[index];
+    }
+    return true;
+}
 
 int main(){
     Tracer a("a");
@@ -52,6 +73,7 @@ int main(){
 
     IntBuffer b1(4);
     IntBuffer b2=b1;
+    b1.set(0,5);
 }
 
 

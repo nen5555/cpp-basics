@@ -69,7 +69,7 @@ private:
     return false;
    }else{
     
-    data_[(head_)%4] =value;
+    data_[(head_)%KCapacity] =value;
     head_= head_+1;
     count_+=1;
    }
@@ -82,7 +82,7 @@ private:
     return false;
    }else{
 
-    value = data_[tail_%4] ;
+    value = data_[tail_%KCapacity] ;
 
     std::cout <<"pop:"<<value<<std::endl;
     tail_ += 1;
@@ -107,6 +107,9 @@ private:
     }else{
         area = (lapRP  - lapLP )*( lapLoP - lapHP );
     }
+
+
+    return area;
 
  }
 

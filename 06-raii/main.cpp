@@ -41,7 +41,7 @@ class IntBuffer{
 };
 
 bool IntBuffer::set(int index,int value){
-    if(index <static_cast<int>(data_.size())|| index >=0)
+    if(index < 0 || index >= static_cast<int>(data_.size()))
     {
         return false;
     }
@@ -52,7 +52,7 @@ bool IntBuffer::set(int index,int value){
 }
 
 bool IntBuffer::get(int index,int& value) const{
-    if(index <static_cast<int>(data_.size()|| index >=0))
+    if(index < 0 || index >= static_cast<int>(data_.size()))
     {
         return false;
     }
@@ -73,7 +73,10 @@ int main(){
 
     IntBuffer b1(4);
     IntBuffer b2=b1;
-    b1.set(0,5);
+    std::cout<<b1.set(0,5)<<std::endl;
+    std::cout<<b1.set(3,9)<<std::endl;
+    std::cout<<b1.set(4,1)<<std::endl;
+    std::cout<<b1.set(-1,1)<<std::endl;
 }
 
 

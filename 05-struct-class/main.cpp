@@ -105,12 +105,8 @@ private:
     if(lapLP  >= lapRP  || lapLoP <=lapHP){
         return area = 0;
     }else{
-        area = (lapRP  - lapLP )*(lapHP - lapLoP);
+        area = (lapRP  - lapLP )*( lapLoP - lapHP );
     }
-
-
-
-    
 
  }
 
@@ -209,7 +205,7 @@ int main(){
     Rect r1{{1,1},2,2};
 
     Point po{5,3};
-    Point po1{11,6};
+
 
     RingBuffer rb{};
 
@@ -226,7 +222,7 @@ int main(){
     int laparea = 0;
     laparea = intersectArea(r,r1);
     std::cout <<"the laparea is:"<<laparea<<std::endl;
-    int x;
+ 
 
     rb.empty();
     rb.push(1);
@@ -251,17 +247,9 @@ int main(){
     rb.pop(f);
 
 
-
-
-
-
-
-
-
         
-        
-    }
+    };
 
    
 
-};
+

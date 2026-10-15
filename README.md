@@ -46,3 +46,8 @@ cmake -S . -B build        # 配置（configure）：生成构建文件，放在
 cmake --build build        # 构建（build）：编译 + 链接
 ./build/main
 ```
+
+阶段	做什么	这几天见过的错误
+编译（compile）	单个 .cpp → .o	语法错误、redefinition、未声明的变量
+链接（link）	多个 .o → 可执行文件	undefined reference、multiple definition
+运行（runtime）	执行程序	ASan 报告、段错误、nan

@@ -68,3 +68,7 @@ Testing/
 .cache/
 main
 .vscode/
+
+third_party/src/
+third_party/build-opencv/
+third_party/opencv/

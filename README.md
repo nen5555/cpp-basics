@@ -38,3 +38,11 @@ g++ -std=c++17 -Wall -Wextra -Werror=return-type -g -fsanitize=address,undefined
 -fsanitize=address,undefined	运行时检查内存错误和未定义行为（UB），入门阶段最好的"老师"
 
 RAII（Resource Acquisition Is Initialization）：资源在构造函数里获取，在析构函数里释放，交给对象的生命周期自动管理
+
+cmake简单使用
+```bash
+cd 07-multi-file
+cmake -S . -B build        # 配置（configure）：生成构建文件，放在 build/ 目录
+cmake --build build        # 构建（build）：编译 + 链接
+./build/main
+```

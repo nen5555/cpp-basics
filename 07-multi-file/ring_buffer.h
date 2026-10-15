@@ -1,7 +1,8 @@
 #pragma once
 
-class ringBuffer{
-    ringBuffer();
+class RingBuffer{
+    public:
+    RingBuffer();
     bool empty();
     bool full();
     int size();
@@ -9,5 +10,9 @@ class ringBuffer{
     bool pop(int &a);
 
     private:
-    const int Kcapacity;
+    static const int Kcapacity=4;
+    int data_[Kcapacity];
+    int head_;
+    int tail_;
+    int counter_;
 };

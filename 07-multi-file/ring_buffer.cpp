@@ -2,30 +2,30 @@
 
 RingBuffer::RingBuffer(): head_(0), tail_(0), counter_(0) {};
 
-bool RingBuffer::empty() {
+const bool RingBuffer::empty() {
     return counter_ == 0;
 };
 
 
-bool RingBuffer::full() {
+const bool RingBuffer::full() {
     return counter_ == Kcapacity;
 };
 
 
-int RingBuffer::size() {
+const int RingBuffer::size() {
     return counter_;
 };
 
 bool RingBuffer::push(int a) {
-    if (full()) {
+    if(full()) {
         return false;
+    }else{
+        data_[head_]=a;
+        head_ = (head_+1) % Kcapacity;
+        counter_++;
+        return true;
     }
-    data_[head_] = a;
-    head_ = (head_ + 1) % Kcapacity;
-    counter_++;
-    return true;
 };
-
 bool RingBuffer::pop(int &a) {
     if (empty()) {
         return false;

@@ -1,6 +1,5 @@
 #include <iostream>
 #include "ring_buffer.h"
-#include "ring_buffer.h"
 
 
 int main() {
@@ -21,3 +20,5 @@ int main() {
 
     return 0;
 }
+
+//第三步试验b时时生成.ow文件时 出现了 所以编译时看单文件

@@ -4,6 +4,8 @@ namespace vis {
              cv::Scalar color , int thickness){
         
         cv::Rect rect1(tl.x, tl.y, br.x-tl.x, br.y-tl.y);
+
+        std::cout << "tl=" << tl << " br=" << br << " rect=" << rect1 << "\n";
         cv::rectangle(img,rect1,color,thickness);
 
 

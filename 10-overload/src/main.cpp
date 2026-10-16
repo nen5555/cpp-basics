@@ -11,9 +11,9 @@ int main(){
     cv::Rect r2 = {100, 120, 640, 512};
  
     cv::Mat img = cv::Mat::zeros(800, 800, CV_8UC3);
-
-    vis::drawBox(img,r1,cv::Scalar(0, 255, 0), -1);
-    vis::drawBox(img, p1, p2,cv::Scalar(0, 0, 255), -1);
+     vis::drawBox(img, p1, p2,cv::Scalar(0, 0, 255),2);
+    vis::drawBox(img,r1,cv::Scalar(0, 255, 0), 2);
+   
 
     
     std::cout << "img: " << img.cols << " x " << img.rows << "\n";

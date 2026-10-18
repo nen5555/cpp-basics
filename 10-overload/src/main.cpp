@@ -15,6 +15,7 @@ int main(){
     vis::drawBox(img,r1,cv::Scalar(0,  0,255), 3);
     vis::drawBox(img,r2,cv::Scalar(255,0 , 0), 2);
   
+   
 
 
     cv::imwrite("out.png", img);

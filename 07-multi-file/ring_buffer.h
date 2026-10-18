@@ -3,9 +3,9 @@
 class RingBuffer{
     public:
     RingBuffer();
-    const bool empty();
-    const bool full();
-    const int size();
+    bool empty() const;
+    bool full() const;
+    int size() const;
     bool push(int a);
     bool pop(int &a);
 

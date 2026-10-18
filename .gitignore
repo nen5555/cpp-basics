@@ -72,3 +72,4 @@ main
 third_party/src/
 third_party/build-opencv/
 third_party/opencv/
+*.png

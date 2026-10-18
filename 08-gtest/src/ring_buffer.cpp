@@ -2,17 +2,17 @@
 
 RingBuffer::RingBuffer(): head_(0), tail_(0), counter_(0) {};
 
-const bool RingBuffer::empty() {
+bool RingBuffer::empty() const {
     return counter_ == 0;
 };
 
 
-const bool RingBuffer::full() {
+ool RingBuffer::full() const {
     return counter_ == Kcapacity;
 };
 
 
-const int RingBuffer::size() {
+int RingBuffer::size() const {
     return counter_;
 };
 
